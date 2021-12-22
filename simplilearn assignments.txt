@@ -1,0 +1,142 @@
+Data Type          Wrapper Class Name        Memory size           
+
+byte                     Byte                    1 byte
+short                    Short                   2 bytes
+int                      Integer                 4 bytes
+long                     Long                    8 bytes
+float                    Float                   4 bytes
+double                   Double                  8 bytes
+boolean                  Boolean                 1 bit
+char                     Character               2 bytes
+
+=============================================================
+
+
+
+operator                  name
+
+a++                  post increment operator
+a--                  post decrement opeartor
+++a                  pre increment operator
+--a                  pre decrement operator
+
+==============================================================
+
+ CODE FOR FINDING FACTORIAL OF A GIVEN NUMBER
+
+
+package assignment;
+
+import java.util.Scanner;
+
+public class Assignment
+{
+	public static void main(String[] args) 
+	{
+		int n;
+		Scanner obj =new Scanner(System.in);
+		System.out.println("enter the number you want");
+		n=obj.nextInt();
+		int fact=1;
+		for(int i=1;i<=n;i++)
+		{
+			fact=fact*i;
+		}
+		System.out.println("factorial of the given number is :"+fact);
+	} 
+}
+===================================================================================
+
+CODE FOR PRINTING MULTIPLICATION TABLE OF A GIVEN NUMBER
+
+
+package assignment;
+
+import java.util.Scanner;
+
+public class Assignment
+{
+	public static void main(String[] args) 
+	{
+		int n;
+		Scanner obj =new Scanner(System.in);
+		System.out.println("enter the number you want");
+		n=obj.nextInt();
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(+n+" * "+i+ " = "+n * i);
+			
+		}
+	} 
+}
+==========================================================================
+CODE FOR PERMUTATION AND COMBINATION
+
+
+package assignment;
+
+public class Permutationandcombination {
+	public static int factorial(int n)
+	{
+		int factorial=1;
+		for(int i=1;i<=n;i++)
+		factorial=factorial*i;
+		return factorial;
+		
+	}
+	public static int nPr(int n,int r)
+	{
+		int result=factorial(n)/factorial(n-r);
+		return result;
+	}
+
+	
+	public static int nCr(int n,int r)
+	{
+		int result=factorial(n)/factorial(n-r)*factorial(r);
+				return result;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(nPr(3,2));
+		System.out.println(nCr(3,2));
+	}
+
+}
+===========================================================================
+STRING POOL
+
+
+String pool is nothing but a storage area in Java heap where string literals stores. It is also known as String Intern Pool or String Constant Pool.
+ It is just like object allocation. By default, it is empty and privately maintained by the Java String class. Whenever we create a string the string 
+ object occupies some space in the heap memory. Creating a number of strings may increase the cost and memory too which may reduce the performance also.
+
+
+The JVM performs some steps during the initialization of string literals that increase the performance and decrease the memory load 
+To decrease the number of String objects created in the JVM the String class keeps a pool of strings.
+
+
+When we create a string literal, the JVM first check that literal in the String pool. If the literal is already present in the pool, 
+ it returns a reference to the pooled instance. If the literal is not present in the pool, a new String object takes place in the String pool
+
+==============================================================================================================================================================
+CONCEPTS ABOUT STRINGS DISCUSSED IN CLASS
+
+
+Stings are immutable.All Strings are stored in the String Pool that is allocated in the Java heap
+ A String is an unavoidable type of variable while writing any application program. 
+String references are used to store various attributes like username, password, emails,etc. In Java, String objects are immutable. 
+Immutable simply means unmodifiable or unchangeable.
+Once String object is created its data or state can't be changed but a new String object is created.
+	
+
+	
+
+
+
+
+
+
+
+
+ 
