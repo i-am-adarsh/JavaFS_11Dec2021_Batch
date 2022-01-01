@@ -1,0 +1,118 @@
+what is abstraction?
+ 
+The meaning of the word “Abstraction”, in general words, is the process of working with ideas rather than their implementation.
+
+For example, consider the example of an email, the user does not know about the complex details such as what happens just after sending an email, which protocol is used by the server to send the message.
+
+Therefore, we just need to mention the address of the receiver, type the content and click the send button.
+
+This is basically called Abstraction in which the complex details are being hidden from the users.
+
+Similarly, in Object-oriented programming, abstraction is a process of providing functionality to the users by hiding its implementation details from them. 
+In other words, the user will have just the knowledge of what an entity is doing instead of its internal working.
+
+========================================================================================================================================
+
+Is Abstract class related to Abstraction ? find it.
+
+
+
+Abstraction and abstract class both are different.
+Abstraction: One among the four types of OOPS concept. It means hiding the complexity of an object by means of composition(sub-dividing) and aggregation(joining). 
+Abstraction is known as Has-A relation e.g. Student has a name, student has a pen, car has one engine i.e. everyone is having Has-A relation.
+
+
+Abstract class: Abstract means what you feel but u dont know what to say. e.g. u are making an application for game and you want your player to kick in game whenever you press 5 button so u will make a method named as kick but the thing is u dnt knw what to write a code so u just make a method unimplemented and will declare it or implement it in other class and hence the class having unimplemented methods is written as abstract.REMEMBER: 
+Abstract class can have both implemented and no-implemented methods and we cannot make an object of abstract class
+
+===============================================================================================================================================
+
+Interfaces also can have few things - what are those things can interfaces have apart from abstract methods?
+
+
+Type of variables: Abstract class can have final, non-final, static and non-static variables. 
+The interface has only static and final variables. 
+Implementation: Abstract class can provide the implementation of the interface. 
+Interface can't provide the implementation of an abstract class
+Interface supports multiple inheritance.
+
+====================================================================================================================================
+
+Can interfaces have normal variables ?
+
+
+Like a class, an interface can have methods and variables, but the methods declared in an interface are by default abstract (only method signature, no body).
+==================================================================================================================================================================
+
+Can interfaces have methods with definitions ? if so how ? or what ?
+
+
+Like a class, an interface can have methods and variables, but the methods declared in an interface are by default abstract (only method signature, no body). 
+Interfaces specify what a class must do and not how. It is the blueprint of the class.
+
+=================================================================================================================================================================
+
+How to implement multiple inheritance using interfaces
+
+
+An interface contains variables and methods like a class but the methods in an interface are abstract by default unlike a class.
+ Multiple inheritance by interface occurs if a class implements multiple interfaces or also if an interface itself extends multiple interfaces.
+
+interface AnimalEat {
+   void eat();
+}
+interface AnimalTravel {
+   void travel();
+}
+class Animal implements AnimalEat, AnimalTravel {
+   public void eat() {
+      System.out.println("Animal is eating");
+   }
+   public void travel() {
+      System.out.println("Animal is travelling");
+   }
+}
+public class Demo {
+   public static void main(String args[]) {
+      Animal a = new Animal();
+      a.eat();
+      a.travel();
+   }
+}
+
+
+Output
+
+Animal is eating
+Animal is travelling
+
+Now let us understand the above program.
+
+The interface AnimalEat and AnimalTravel have one abstract method each i.e. eat() and travel(). 
+The class Animal implements the interfaces AnimalEat and AnimalTravel. A code snippet which demonstrates this is as follows:
+
+interface AnimalEat {
+   void eat();
+}
+interface AnimalTravel {
+   void travel();
+}
+class Animal implements AnimalEat, AnimalTravel {
+   public void eat() {
+      System.out.println("Animal is eating");
+   }
+   public void travel() {
+      System.out.println("Animal is travelling");
+   }
+}
+In the method main() in class Demo, an object a of class Animal is created. 
+Then the methods eat() and travel() are called. A code snippet which demonstrates this is as follows:
+
+public class Demo {
+   public static void main(String args[]) {
+      Animal a = new Animal();
+      a.eat();
+      a.travel();
+   }
+}
+
