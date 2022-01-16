@@ -1,0 +1,79 @@
+package mypackage;
+class Node
+{
+	public int data;
+	public Node next;
+	
+	public void printData() 
+	{
+		System.out.println("=="+data);
+		
+	}
+}
+class SingleLinkList
+{
+	public Node head;
+	public Boolean isEmpty() 
+	{
+		return(head==null);
+	}
+	public void firstInsert(int data) 
+	{
+		Node n= new Node();
+		n.data=data;
+		n.next=head;
+		head=n;
+	}
+	public void deleteFirst()
+	{
+		head=head.next;
+	}
+	public void insertLast(int data)
+	{
+		Node n= new Node();
+		n.next=null;
+		n.data=data;
+		if(head==null)
+		{
+			head=n;
+		}
+		else
+		{
+			 Node Current = head;
+		while(Current.next!=null)
+		{
+			Current=Current.next;
+		}
+		Current.next=n;
+		}
+		}
+	public void printElements()
+	{
+		Node Current=head;
+		while(Current!=null) 
+		{
+			Current.printData();
+			Current=Current.next;		
+		}
+	}
+}
+
+public class Myclass
+{
+  public static void main(String[] args)
+	{
+	  SingleLinkList obj=new SingleLinkList();
+	  obj.firstInsert(50);
+	  obj.insertLast(60);
+	  obj.insertLast(70);
+	  
+	  obj.printElements();
+	  
+	  obj.deleteFirst();
+	 
+	 System.out.println("================");
+	 
+	  obj.printElements();
+	 }
+
+}
